@@ -1,0 +1,28 @@
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		   -box-sizing: border-box;
+}
+
+body{
+	font: arial;
+}
+
+.button{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12px;
+	width: 80px;
+	height: 20px;
+	background-color: #ccc;
+	padding-top: 1px;
+	border: 1px solid #000;
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.button:hover{
+	cursor: pointer;
+	background-color: #fff;
+}
