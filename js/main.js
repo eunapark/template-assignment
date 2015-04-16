@@ -28,7 +28,7 @@
 
 // template 입력한 부분 
 
-		function lineEntrances(lineName){
+		function lineEntrances(lineName)
 			$('#canvas').html('');
 	
 
