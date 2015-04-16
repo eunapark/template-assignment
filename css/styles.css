@@ -26,3 +26,11 @@ body{
 	cursor: pointer;
 	background-color: #fff;
 }
+
+h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color: #000;
+	padding-left: 40px;
+	padding-top: 40px;
+}

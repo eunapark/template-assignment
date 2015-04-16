@@ -19,7 +19,7 @@
 		
 			subwayStation.lineList = subwayStation.line.split('-');
 		
-			});
+		});
 
 
 		$('.button').on('click',function(){
