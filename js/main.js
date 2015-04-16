@@ -1,5 +1,6 @@
 (function(){
 
+
 	var templateHtml = $('#template').html();
 
 	var templateFactory = _.template(templateHtml);
@@ -25,6 +26,7 @@
 		
 		});
 
+// template 입력한 부분 
 
 		function lineEntrances(lineName){
 			$('#canvas').html('');
@@ -42,7 +44,7 @@
 			});
 		}
 
-		ß$('.button').on('click',function(){
+		$('.button').on('click',function(){
 			var subway_line = $(this).attr('data-subway');
 			lineEntrances(subway_line);
 
