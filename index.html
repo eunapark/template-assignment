@@ -25,6 +25,18 @@
 
 	<div id = "canvas"></div>
 
+	<script id="template" type="text/jst">
+		<div class="entrance_container">
+			<div class="lines">
+				// <% linelist.forEach(fuction(line){ %>
+				// 	<div class="line" data-subway="<%= line %>">
+				// 		<%= line%>
+				// 	</div>
+				// <% }); %>
+			</div>
+		</div>
+	</script>
+	
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/d3.v3.min.js"></script>
 	<script src="js/underscore-min.js"></script>
@@ -32,16 +44,6 @@
 
 <!-- template 입력한 부분 -->
 
-	<script id="template" type="text/jst">
-		<div class="entrance_container">
-			<div class="lines">
-				<% linelist.forEach(fuction(line){ %>
-					<div class="line" data-subway="<%= line %>">
-						<%= line%>
-					</div>
-				<% }); %>
-			</div>
-		</div>
 
 </body>
 </html>
