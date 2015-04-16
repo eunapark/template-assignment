@@ -11,5 +11,5 @@ Tried to set up the template, but console says:
 
 	var templateFactory = _.template(templateHtml);
 
-Have different div class objects instead of ul and li links
+Have different div class objects instead of ul and li links</br>
 Need clarification on the html-js writing
