@@ -15,11 +15,13 @@
 
 	<h1>Subway Entrances</h1>
 
-		<div class="button" id="1">1</div>
-		<div class="button" id="2">2</div>
+	<nav>
+		<div class="button" data-subway="1">1</div>
+		<div class="button" data-subway="2">2</div>
 	<!-- 	<div class="button" id="3">3 Line</div> -->
-		<div class="button" id="A">A</div>
-		<div class="button" id="B">B</div>
+		<div class="button" data-subway="A">A</div>
+		<div class="button" data-subway="B">B</div>
+	</nav>
 
 	<div id = "canvas"></div>
 
@@ -30,9 +32,9 @@
 
 	<script id="template" type="text/jst">
 		<div class="entrance_container">
-			<div class=lines">
-				<% _.each(fuction(line){ %>
-					<div class="line" id="<%= line %>">
+			<div class="lines">
+				<% linelist.forEach(fuction(line){ %>
+					<div class="line" data-subway="<%= line %>">
 						<%= line%>
 					</div>
 				<% }); %>

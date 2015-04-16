@@ -1,5 +1,9 @@
 (function(){
 
+	var templateHtml = $('#template').html();
+
+	var templateFactory = _.template(templateHtml);
+
 	d3.csv('data/DOITT_SUBWAY_ENTRANCE_01_13SEPT2010.csv', function(error, subwayData){
 		if(error){
 			console.log(error);
@@ -22,23 +26,33 @@
 		});
 
 
-		$('.button').on('click',function(){
-			$('#canvas').html ('');
+		function lineEntrances(lineName){
+			$('#canvas').html('');
+	
 
 			var selectedid = $(this).attr('id');
-			console.log(selectedid);
 
 			var filteredlist = subwayData.filter(function(subwayStation){
-			return _.contains(subwayStation.lineList, selectedid); 
-			});
+				return _.contains(subwayStation.lineList, selectedid); 
+				})
 
-			filteredlist.forEach(function(subwayStation){
-			$('#canvas').append('<div class="name">' + subwayStation.name  + '</div>' + subwayStation.lineList.join(' - ') + '</div>' + '</br>'); 
+			filteredList.forEach(function(subwayStation){
+				console.log(filteredlist)
+				$('#canvas').append( templateFactory(entrance) );
 			});
+		}
+
+		ß$('.button').on('click',function(){
+			var subway_line = $(this).attr('data-subway');
+			lineEntrances(subway_line);
+
+			// filteredlist.forEach(function(subwayStation){
+			// $('#canvas').append('<div class="name">' + subwayStation.name  + '</div>' + subwayStation.lineList.join(' - ') + '</div>' + '</br>'); 
+			// });
 
 		});
 
-	})
+	});
 
 }).call(this);
 
